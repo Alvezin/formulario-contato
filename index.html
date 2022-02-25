@@ -36,32 +36,47 @@
             <p>2dv15fv1db1vb1</p>
         </aside>
 
-        <form id="formulario">
+        <form id="form" class="form">
             <fieldset>
-                <label for="name">Name:</label>
-                <input id="name" type="text">
 
-                <label for="email">Email:</label>
-                <input id="email" type="email">
+                <div class="container">
+                    <label class="label" for="name">Name:</label>
+                    <input class="input" id="name" type="text">
+                </div>
 
-                <label for="url">Website(optional):</label>
-                <input id="url" type="url">
+                <div class="container">
+                    <label class="label" for="email">Email:</label>
+                    <input class="input" id="email" type="email">
+                </div>
 
-                <label for="company">Company (optional):</label>
-                <input id="company" type="text">
+                <div class="container">
+                    <label  class="label"for="url">Website(optional):</label>
+                    <input  class="input" id="url" type="url">
+                </div>
 
-                <label for="msg">Message:</label>
-                <textarea name="msg" id="msg" cols="70" rows="10"></textarea>
+                <div class="container">
+                    <label  class="label"for="company">Company (optional):</label>
+                    <input  class="input"id="company" type="text">
+                </div>
+
+            
+                <div class="text_area">
+                    <label class="label" for="msg">Message:</label>
+                    <textarea name="msg" id="msg" cols="70" rows="10"></textarea>
+                </div>
                 
-                <input type="checkbox" id="terms" name="terms" value="yes">
-                <label for="terms"> I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
-
-                <div>
-                    <button type="submit">
-                        Send Message
-                    </button>
+                
+                
+                <div class="terms">
+                    <input type="checkbox" id="terms" name="terms" value="yes">
+                    <label class="label" for="terms"> I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
                 </div>
             </fieldset>
+            <div class="submit">
+                <button type="submit">
+                    Send Message
+                </button>
+            </div>
         </form>
     </main>
 </body>
