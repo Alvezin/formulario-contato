@@ -11,7 +11,7 @@ body{
     "content content"
     "footer footer";
     grid-template-rows: 100px 1fr 100px;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 49.5%;
     background-color: #492EDA;
 }
 header{
@@ -129,7 +129,7 @@ fieldset{
     padding: 10px;  /*campo dentro do form*/
     color: black;
     font-weight: bold;
-    width: 99%;
+    width: fit-content;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -283,5 +283,27 @@ footer{
     #nav-list{
         flex-direction: row;
 
+    }
+}
+
+@media screen and (max-width: 397px){
+    .text h1{
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+    .text{
+        padding-bottom: 31px;
+    }
+    .aside img{
+        width: max-content;
+    }
+}
+
+@media screen and (max-width: 368px){
+    #nav-bar{
+        font-size: 4vw;
+    }
+    #nav-bar ul{
+        width: 100%;
     }
 }
