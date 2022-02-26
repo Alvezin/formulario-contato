@@ -7,11 +7,11 @@ body{
     font-family: 'Poppins', sans-serif;
     display: grid;
     grid-template-areas: /*Montando as posições do site*/
-    "title title"
+    "title nav"
     "content content"
     "footer footer";
     grid-template-rows: 100px 1fr 100px;
-    grid-template-columns: 100%;
+    grid-template-columns: 50% 50%;
     background-color: #492EDA;
 }
 header{
@@ -23,7 +23,6 @@ header{
     align-items: center;
     padding: 0 30px;
     border-bottom-left-radius: 10px;
-    border-bottom-right-radius:10px;
     border-bottom: 3px solid #770fa3;
 }
 main{
@@ -43,11 +42,24 @@ main{
 }
 
 /*Estilo da barra de navegação*/
-.nav_bar{
+#nav-list{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-bar{
+    background-color: #AB25E6;
+    grid-area: nav;
     font-size: 0.8rem;
     text-transform: uppercase;
+    border-bottom-right-radius: 10px;
+    border-bottom: 3px solid #770fa3;
+    display: flex;
+    justify-content: center;
 }
-.nav_bar a{
+#nav-bar a{
     text-decoration: none;
     color: white;
     padding-right: 5px;
@@ -201,6 +213,7 @@ fieldset{
 
 /*Estilização do footer*/
 footer{
+    grid-area: footer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,6 +244,44 @@ footer{
     }
 }
 
+
+
 @media screen and (max-width:546px) {
+    body{
+        display: grid;
+        grid-template-areas: /*Montando as posições do site*/
+        "title title"
+        "nav nav"
+        "content content"
+        "footer footer";
+        grid-template-rows: 100px 50px 1fr 100px;
+        grid-template-columns: 100%;
+    }
+    header{
+        grid-area: title;
+        border: none;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+
+    }
+    main{
+        grid-template-areas: 
+        "text text"
+        "aside aside"
+        "form form";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr ;
+    }
     
+    #nav-bar{
+        grid-area: nav;
+        justify-content: center;
+        align-items: center;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    #nav-list{
+        flex-direction: row;
+
+    }
 }
