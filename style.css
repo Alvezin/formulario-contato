@@ -51,7 +51,8 @@ main{
     grid-area: text;
     background-color: #492EDA;
     text-align: justify;
-    padding: 15px;
+    padding: 15px ;
+    padding-left: 30px;
     line-height: 4vw;
 }
 h1{
@@ -68,12 +69,12 @@ h1{
     background-color: white;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 95%;
-    height: 100%;
+    height: fit-content;
     font-size: small;
 }
 .form fieldset{
@@ -81,7 +82,7 @@ h1{
     padding: 10px;
     color: black;
     font-weight: bold;
-    width: 100%;
+    width: 99%;
 }
 .input{
     width: 90%;
@@ -89,7 +90,6 @@ h1{
     margin: 5px;
 }
 fieldset{
-    position: absolute;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -108,12 +108,24 @@ fieldset{
     width: 100%;
 }
 .text_area textarea{
-    width: 100%;
+    width: 96%;
 }
 .terms{
     position: relative;
     right: 25vw;
 }
 .submit{
-    display: block;
+    position: relative;
+    left: 8vw;
+}
+.submit button{
+    width: 8vw;
+    height: 3vw;
+    border-radius: 8px;
+    border: 1.5px solid blue;
+    background-color: #6e5bdc;
+    cursor: pointer;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: bold;
 }
