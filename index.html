@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Fale Conosco!</title>
 </head>
 <body>
     <header>
-        <h1>Kinsta</h1>
-        
+        <a href="#"><img class="logo" src="images/logo_final.png" alt="Logo da empresa, com o texto: tech solutions"></a>        
         <nav class="nav_bar">
-            <a href="#">Features</a>
-            <a href="#">Plans</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+            <a href="#">Início</a>
+            <a href="#">Planos</a>
+            <a href="#">Cliente</a>
+            <a href="#">Contato</a>
             <a class="nav--special" href="#">Login</a>
         </nav>
             
@@ -24,8 +24,9 @@
     <main>
 
         <section class="text">
-            <h1>Contact Us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur
+            <h1>Entre em Contato Conosco!</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur
                 adipisicing elit. Numquam consectetur quae
                 iste itaque, nobis tenetur eum repellendus
                 corporis culpa ipsam fugiat doloremque ut ullam
@@ -33,43 +34,43 @@
             </p>
         </section>
         <aside class="aside">
-            <p>2dv15fv1db1vb1</p>
+            <img src="images/logo_roxo.png" alt="Logo da empresa">
         </aside>
 
         <form id="form" class="form">
             <fieldset>
 
                 <div class="container">
-                    <label class="label" for="name">Name:</label>
-                    <input class="input" id="name" type="text">
+                    <label class="label" for="name">Nome:</label>
+                    <input class="input" id="name" type="text" required>
                 </div>
 
                 <div class="container">
-                    <label class="label" for="email">Email:</label>
-                    <input class="input" id="email" type="email">
+                    <label class="label" for="email">E-mail:</label>
+                    <input class="input" id="email" type="email" required>
                 </div>
 
                 <div class="container">
-                    <label  class="label"for="url">Website(optional):</label>
-                    <input  class="input" id="url" type="url">
+                    <label  class="label"for="url">Website(opcional):</label>
+                    <input  class="input" id="url" type="url" >
                 </div>
 
                 <div class="container">
-                    <label  class="label"for="company">Company (optional):</label>
+                    <label  class="label"for="company">Company (opcional):</label>
                     <input  class="input"id="company" type="text">
                 </div>
 
             
                 <div class="text_area">
-                    <label class="label" for="msg">Message:</label>
-                    <textarea name="msg" id="msg" cols="70" rows="10"></textarea>
+                    <label class="label" for="msg">Messagem:</label>
+                    <textarea name="msg" id="msg" cols="70" rows="10" required></textarea>
                 </div>
                 
                 
                 
                 <div class="terms">
-                    <input type="checkbox" id="terms" name="terms" value="yes">
-                    <label class="label" for="terms"> I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+                    <input type="checkbox" id="terms" name="terms" value="yes" required>
+                    <label class="label" for="terms"> Eu concordo com os <a href="#">Termos e Condições</a> e as <a href="#">Politicas de Privacidade</a></label>
                 </div>
             </fieldset>
             <div class="submit">
@@ -79,5 +80,8 @@
             </div>
         </form>
     </main>
+    <footer>
+        <p>Site criado por Gabriel Alves</p>
+    </footer>
 </body>
 </html>

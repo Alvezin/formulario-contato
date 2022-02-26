@@ -8,18 +8,23 @@ body{
     display: grid;
     grid-template-areas: 
     "title title"
-    "content content";
-    grid-template-rows: 100px 1fr;
+    "content content"
+    "footer footer";
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 100%;
     background-color: #492EDA;
 }
 header{
     color: white;
     grid-area: title;
-    background-color: #492EDA;
+    background-color: #AB25E6;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px;
+    border-bottom: 3px solid #770fa3;
 }
 main{
     display: grid;
@@ -29,9 +34,10 @@ main{
     "form form";
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr 30vw;
+    padding-bottom: 30px;
 }
 .nav_bar{
-    font-size: small;
+    font-size: 0.8rem;
     text-transform: uppercase;
 }
 .nav_bar a{
@@ -43,9 +49,15 @@ main{
     border: 3px solid white;
     padding: 5px;
     border-radius: 15px;
-    font-size: 300;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: rgb(119, 15, 163);
 }
-
+.nav--special:hover{
+    border: 3px solid rgb(175, 134, 209);
+    color: rgb(175, 134, 209);
+    transition: .5s;
+}
 .text{
     color: white;
     grid-area: text;
@@ -66,7 +78,7 @@ h1{
 }
 .form{
     grid-area: form;
-    background-color: white;
+    background-color: whitesmoke;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -75,7 +87,10 @@ h1{
     transform: translate(-50%, -50%);
     width: 95%;
     height: fit-content;
-    font-size: small;
+    font-size: 0.8rem;
+    border: 1.5px solid #215ec2;
+    border-radius: 8px;
+    padding-bottom: 30px;
 }
 .form fieldset{
     border: none;
@@ -88,6 +103,17 @@ h1{
     width: 90%;
     height: 2rem;
     margin: 5px;
+    font-size: 1rem;
+    padding: 3px;
+}
+.input:hover{
+    background-color: whitesmoke;
+    transition: .5s;
+}
+.input:focus{
+    outline: 1px solid rgb(148, 148, 148);
+    background-color: rgb(213, 211, 211);
+    transition: .5s;
 }
 fieldset{
     display: flex;
@@ -102,6 +128,10 @@ fieldset{
     width: 50%;
     justify-content: center;
 }
+.container input{
+    border-radius: 8px;
+    border: 1px solid rgb(169, 166, 166)
+} 
 .text_area{
     display: flex;
     flex-direction: column;
@@ -110,14 +140,26 @@ fieldset{
 .text_area textarea{
     width: 96%;
 }
+.text_area textarea:hover{
+    background-color: whitesmoke;
+    transition: .5s;
+}
+.text_area textarea:focus{
+    outline: 1px solid rgb(148, 148, 148);
+    background-color: rgb(213, 211, 211);
+    transition: .5s;
+    font-family: 'Poppins', sans-serif;
+}
+
 .terms{
     position: relative;
-    right: 25vw;
+    right: 28.5vw;
 }
 .submit{
     position: relative;
-    left: 8vw;
+    left: 3vw;
 }
+
 .submit button{
     width: 8vw;
     height: 3vw;
@@ -127,5 +169,32 @@ fieldset{
     cursor: pointer;
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-size: bold;
+    font-weight: bold;
+}
+.submit button:hover{
+    background-color: #5b4bb6;
+    transition: 0.5s;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7B26F0;
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top: 3px solid #770fa3;
+}
+
+.logo{
+    width: 12rem;
+}
+.aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aside img{
+    width: 70%;
 }
