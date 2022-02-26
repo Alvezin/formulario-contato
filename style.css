@@ -198,3 +198,10 @@ footer{
 .aside img{
     width: 70%;
 }
+.terms .label a{
+    text-decoration: none;
+}
+.terms .label a:hover{
+    color: #7269a7;
+    text-decoration: underline;
+}
