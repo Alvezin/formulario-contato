@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
-*{
+*{ /*Configurações GLobais*/
     margin: 0;
     padding: 0;
 }
 body{
     font-family: 'Poppins', sans-serif;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas: /*Montando as posições do site*/
     "title title"
     "content content"
     "footer footer";
@@ -33,9 +33,16 @@ main{
     "text aside"
     "form form";
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 30vw;
+    grid-template-rows: 1fr 1fr;
     padding-bottom: 30px;
 }
+
+/*Logo*/
+.logo{
+    width: 12rem;
+}
+
+/*Estilo da barra de navegação*/
 .nav_bar{
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -58,6 +65,8 @@ main{
     color: rgb(175, 134, 209);
     transition: .5s;
 }
+
+/*Estilização dos textos do corpo da página*/
 .text{
     color: white;
     grid-area: text;
@@ -67,15 +76,26 @@ main{
     padding-left: 30px;
     line-height: 4vw;
 }
+.text p{
+    height: 26vw;
+}
 h1{
     padding: 5px;
 }
 
+/*Estilização do campo aside(onde se encontra  a imagem)*/
 .aside{
     grid-area: aside;
-    color: white;
     background-color: #492EDA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.aside img{
+    width: 70%;
+}
+
+/*Estilização do campo de formulário*/
 .form{
     grid-area: form;
     background-color: whitesmoke;
@@ -92,16 +112,23 @@ h1{
     border-radius: 8px;
     padding-bottom: 30px;
 }
-.form fieldset{
+fieldset{
     border: none;
-    padding: 10px;
+    padding: 10px;  /*campo dentro do form*/
     color: black;
     font-weight: bold;
     width: 99%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
 }
+
+
 .input{
     width: 90%;
-    height: 2rem;
+    height: 2rem; /*Estilização dos campos de entrada*/
     margin: 5px;
     font-size: 1rem;
     padding: 3px;
@@ -115,13 +142,7 @@ h1{
     background-color: rgb(213, 211, 211);
     transition: .5s;
 }
-fieldset{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -152,8 +173,9 @@ fieldset{
 }
 
 .terms{
-    position: relative;
-    right: 28.5vw;
+    position: static;
+    float: left;
+    width: 100%;
 }
 .submit{
     position: relative;
@@ -161,8 +183,8 @@ fieldset{
 }
 
 .submit button{
-    width: 8vw;
-    height: 3vw;
+    width: 100px;
+    height: 35px;
     border-radius: 8px;
     border: 1.5px solid blue;
     background-color: #6e5bdc;
@@ -170,11 +192,14 @@ fieldset{
     color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
+    font-size: 0.7rem;
 }
 .submit button:hover{
     background-color: #5b4bb6;
     transition: 0.5s;
 }
+
+/*Estilização do footer*/
 footer{
     display: flex;
     justify-content: center;
@@ -187,21 +212,25 @@ footer{
     border-top: 3px solid #770fa3;
 }
 
-.logo{
-    width: 12rem;
-}
-.aside{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.aside img{
-    width: 70%;
-}
+
+
 .terms .label a{
     text-decoration: none;
 }
 .terms .label a:hover{
     color: #7269a7;
     text-decoration: underline;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 794px) {
+    h1{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:546px) {
+    
 }
