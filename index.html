@@ -45,48 +45,62 @@
 
                 <div class="container">
                     <label class="label name" for="name">Nome:</label>
-                    <input class="input" id="name" type="text" placeholder="Digite seu nome:" required onblur="validarTxt('name')">
+                    <input onchange="toggleBtn()" name="name" class="input" id="name" type="text" placeholder="Digite seu nome:" required onblur="validarTxt('name')">
                 </div>
 
                 <div class="container">
                     <label class="label" for="email">E-mail:</label>
-                    <input class="input" id="email" type="email" placeholder="Digite seu E-mail:" required>
+                    <input onchange="toggleBtn()" name="email" class="input" id="email" type="email" placeholder="Digite seu E-mail:" required>
                 </div>
 
                 <div class="container">
                     <label  class="label"for="url">Website(opcional):</label>
-                    <input  class="input" id="url" type="url" placeholder="URL do Website:" >
+                    <input  name="website" class="input" id="url" type="url" placeholder="URL do Website:" >
                 </div>
 
                 <div class="container">
                     <label  class="label"for="company">Companhia (opcional):</label>
-                    <input  class="input"id="company" type="text" placeholder="Nome da Companhia:">
+                    <input name="companhia" class="input"id="company" type="text" placeholder="Nome da Companhia:">
                 </div>
 
             
                 <div class="text_area">
                     <label class="label" for="msg">Messagem:</label>
-                    <textarea name="msg" id="msg" cols="70" rows="10" placeholder="Digite sua mensagem:" required></textarea>
+                    <textarea onchange="toggleBtn()" name="msg" id="msg" cols="70" rows="10" placeholder="Digite sua mensagem:" required></textarea>
                 </div>
                 
                 
                 
                 <div class="terms">
-                    <input type="checkbox" id="terms" name="terms" value="yes" required>
+                    <input onchange="toggleBtn()" type="checkbox" id="terms" name="terms" value="yes" required>
                     <label class="label" for="terms"> Eu concordo com os <a href="#">Termos e Condições</a> e as <a href="#">Politicas de Privacidade</a></label>
                 </div>
+
             </fieldset>
-            <div class="submit">
-                <button type="submit">
-                    Enviar
-                </button>
-            </div>
+
+
+            <section id="modal">
+                <div>
+                    <h1>Confirme os dados: </h1>
+                    <textarea name="confirma" id="confirma" cols="30" rows="10"></textarea>
+                    <button>Confirmar</button>
+                </div>
+            </section>
+
         </form>
+        <div class="submit">
+            <button disabled onclick="toggleDisplay('modal')" id="btn-send"> 
+                Enviar
+            </button>
+        </div>
     </main>
     <footer>
         <p>Site criado por Gabriel Alves</p>
     </footer>
 
+    <script src="scripts/toggleDisplay.js"></script>
+    <script src="scripts/toggleBtn.js"></script>
     <script src="scripts/validar.js"></script>
+    <script src="scripts/dadosModal.js"></script>
 </body>
 </html>

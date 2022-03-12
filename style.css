@@ -199,10 +199,12 @@ fieldset{
 }
 .submit{
     position: relative;
-    left: 3vw;
+    left: 4vw;
+    bottom: 41px;
 }
 
-.submit button{
+button{
+    transition: .5s ease-in-out;
     width: 100px;
     height: 35px;
     border-radius: 8px;
@@ -214,7 +216,7 @@ fieldset{
     font-weight: bold;
     font-size: 0.7rem;
 }
-.submit button:hover{
+button:hover{
     background-color: #5b4bb6;
     transition: 0.5s;
 }
@@ -243,6 +245,44 @@ footer{
     text-decoration: underline;
 }
 
+#modal{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 8px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.248);
+    justify-content: center;
+    align-items: center;  
+}
+#modal div{
+    background-color: rgb(228, 213, 230);
+    width: 75%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1.5px solid rgb(114, 113, 113);
+}
+#modal div textarea{
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow-y: hidden;
+}
+#modal div button{
+    width: 90px;
+}
+#modal.active{
+    display: flex;
+}
+button:disabled{
+    background-color: gray;
+    transition: .5s ease-in-out;
+}
 
 /*MEDIA QUERIES*/
 
