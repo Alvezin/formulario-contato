@@ -63,6 +63,11 @@ main{
     text-decoration: none;
     color: white;
     padding-right: 5px;
+    font-weight: bold;
+}
+#nav-bar a:hover{
+    color: rgb(191, 189, 189);
+    transition: .4s;
 }
 .nav--special{
     border: 3px solid white;
@@ -172,6 +177,8 @@ fieldset{
 }
 .text_area textarea{
     width: 96%;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
 }
 .text_area textarea:hover{
     background-color: whitesmoke;
@@ -188,6 +195,7 @@ fieldset{
     position: static;
     float: left;
     width: 100%;
+    margin: 3px;
 }
 .submit{
     position: relative;
@@ -262,7 +270,7 @@ footer{
         border: none;
         border-bottom-right-radius: 0px;
         border-bottom-left-radius: 0px;
-
+        padding: 0;
     }
     main{
         grid-template-areas: 
@@ -282,6 +290,7 @@ footer{
     }
     #nav-list{
         flex-direction: row;
+        gap: 10px;
 
     }
 }

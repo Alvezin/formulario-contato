@@ -44,29 +44,29 @@
             <fieldset>
 
                 <div class="container">
-                    <label class="label" for="name">Nome:</label>
-                    <input class="input" id="name" type="text" required>
+                    <label class="label name" for="name">Nome:</label>
+                    <input class="input" id="name" type="text" placeholder="Digite seu nome:" required onblur="validarTxt('name')">
                 </div>
 
                 <div class="container">
                     <label class="label" for="email">E-mail:</label>
-                    <input class="input" id="email" type="email" required>
+                    <input class="input" id="email" type="email" placeholder="Digite seu E-mail:" required>
                 </div>
 
                 <div class="container">
                     <label  class="label"for="url">Website(opcional):</label>
-                    <input  class="input" id="url" type="url" >
+                    <input  class="input" id="url" type="url" placeholder="URL do Website:" >
                 </div>
 
                 <div class="container">
-                    <label  class="label"for="company">Compania (opcional):</label>
-                    <input  class="input"id="company" type="text">
+                    <label  class="label"for="company">Companhia (opcional):</label>
+                    <input  class="input"id="company" type="text" placeholder="Nome da Companhia:">
                 </div>
 
             
                 <div class="text_area">
                     <label class="label" for="msg">Messagem:</label>
-                    <textarea name="msg" id="msg" cols="70" rows="10" required></textarea>
+                    <textarea name="msg" id="msg" cols="70" rows="10" placeholder="Digite sua mensagem:" required></textarea>
                 </div>
                 
                 
@@ -86,5 +86,7 @@
     <footer>
         <p>Site criado por Gabriel Alves</p>
     </footer>
+
+    <script src="scripts/validar.js"></script>
 </body>
 </html>
