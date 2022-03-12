@@ -244,8 +244,22 @@ footer{
     color: #7269a7;
     text-decoration: underline;
 }
+#confirma{
+    background-color: white;
+    width: 90%;
+    height: 1fr;
+    padding: 10px;
+    list-style: none;
+    gap: 10px;
+    font-size: 1.05rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 0 8px black;
+}
 
 #modal{
+
     display: none;
     position: absolute;
     top: 0;
@@ -259,8 +273,8 @@ footer{
 }
 #modal div{
     background-color: rgb(228, 213, 230);
-    width: 75%;
-    height: 75%;
+    width: 1fr;
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -268,14 +282,28 @@ footer{
     border-radius: 8px;
     border: 1.5px solid rgb(114, 113, 113);
 }
-#modal div textarea{
-    margin: 20px 0;
+
+
+#modal div #exit{
+    margin: 10px;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: 48%;
+    bottom: 8%;
+    cursor: pointer;
     border-radius: 8px;
-    overflow-y: hidden;
+    border: 1.5px solid blue;
+    background-color: #6e5bdc;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 0.7rem;
 }
-#modal div button{
-    width: 90px;
+#modal button{
+    margin: 10px;
 }
+
 #modal.active{
     display: flex;
 }

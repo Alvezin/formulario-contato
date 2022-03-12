@@ -69,27 +69,27 @@
                     <textarea onchange="toggleBtn()" name="msg" id="msg" cols="70" rows="10" placeholder="Digite sua mensagem:" required></textarea>
                 </div>
                 
-                
-                
                 <div class="terms">
                     <input onchange="toggleBtn()" type="checkbox" id="terms" name="terms" value="yes" required>
                     <label class="label" for="terms"> Eu concordo com os <a href="#">Termos e Condições</a> e as <a href="#">Politicas de Privacidade</a></label>
                 </div>
 
             </fieldset>
-
-
             <section id="modal">
                 <div>
-                    <h1>Confirme os dados: </h1>
-                    <textarea name="confirma" id="confirma" cols="30" rows="10"></textarea>
-                    <button>Confirmar</button>
+                    <input type="button" onclick="toggleDisplay('modal')" id="exit" value="X">
+                    <h1>Confirme se seus dados estão corretos: </h1>
+                    <ul readonly  id="confirma">
+    
+                    </ul>
+                    <button >Confirmar</button>
                 </div>
             </section>
-
         </form>
+        
+
         <div class="submit">
-            <button disabled onclick="toggleDisplay('modal')" id="btn-send"> 
+            <button disabled onclick="toggleDisplay('modal'), dados()" id="btn-send"> 
                 Enviar
             </button>
         </div>
